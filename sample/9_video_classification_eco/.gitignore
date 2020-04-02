@@ -1,6 +1,0 @@
-data/
-tbX/
-weights/
-.ipynb_checkpoints
-*.pyc
-*.pth

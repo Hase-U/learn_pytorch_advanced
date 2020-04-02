@@ -1,8 +1,0 @@
-data/
-vocab/
-weights/
-.ipynb_checkpoints
-*.pyc
-*.pth
-.vector_cache/
-.data/
