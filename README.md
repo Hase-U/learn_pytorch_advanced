@@ -1,0 +1,2 @@
+# learn_pytorch_advanced
+『つくりながら学ぶ！PyTorchによる発展ディープラーニング（小川雄太郎）』をGoogle colaboratoryを環境として自習していくリポジトリ
