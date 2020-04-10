@@ -2,7 +2,7 @@ import cv2  # OpenCVライブラリ
 import matplotlib.pyplot as plt 
 import numpy as np
 import torch
-from ssd_predict_show import SSDPredictShow
+from utils.ssd_predict_show import SSDPredictShow
 
 from utils.ssd_model import SSD
 
@@ -28,11 +28,11 @@ ssd_cfg = {
 net = SSD(phase="inference", cfg=ssd_cfg)
 
 # SSDの学習済みの重みを設定
-net_weights = torch.load('./weights/ssd300_10.pth',
-                         map_location={'cuda:0': 'cpu'})
+# net_weights = torch.load('./weights/ssd300_10.pth',
+#                          map_location={'cuda:0': 'cpu'})
 
-# net_weights = torch.load('~/Desktop/pytorch_advance/2_objectdetection/weights/ssd300_mAP_77.43_v2.pth',
-#                         map_location={'cuda:0': 'cpu'})
+net_weights = torch.load('./weights/ssd300_mAP_77.43_v2.pth',
+                        map_location={'cuda:0': 'cpu'})
 
 net.load_state_dict(net_weights)
 

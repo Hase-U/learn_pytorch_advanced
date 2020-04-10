@@ -133,6 +133,7 @@ class SSDPredictShow():
         plt.figure(figsize=(10, 10))
         plt.imshow(rgb_img)
         currentAxis = plt.gca()
+        # plt.savefig("./savefig/cow.png")
 
         # BBox分のループ
         for i, bb in enumerate(bbox):
@@ -160,3 +161,6 @@ class SSDPredictShow():
             # 長方形の枠の左上にラベルを描画する
             currentAxis.text(xy[0], xy[1], display_txt, bbox={
                              'facecolor': color, 'alpha': 0.5})
+
+
+        plt.savefig("./savefig/cow_p.png")
